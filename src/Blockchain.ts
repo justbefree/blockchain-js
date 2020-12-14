@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-07-16 14:06:38
 * @Last Modified by:   Just be free
-* @Last Modified time: 2020-07-17 18:58:16
+* @Last Modified time: 2020-12-14 16:13:10
 * @E-mail: justbefree@126.com
 */
 import { default as HttpAsync } from "./http";
@@ -111,6 +111,7 @@ class Blockchain {
         if (chainObjcet.length > maxLength && this.validChain(chainObjcet.chain)) {
           maxLength = chainObjcet.length;
           newChain = chainObjcet.chain;
+          this.chain = newChain;
           isNewChain = true;
         }
       });
